@@ -1,0 +1,26 @@
+<template>
+ <div id="app">
+  <div class="item">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/backpack.jpg" width="235" height="300"/>
+    <div class="quantity">
+      <button class="inc" @click="counter > 0 ? counter -= 1 : 0">-</button>
+      <span class="quant-text">Quantity: {{ counter }}</span>
+      <button class="inc" @click="counter += 1">+</button>
+    </div>
+    <button class="submit" @click="">Submit</button>
+  </div><!--item-->
+</div>
+</template>
+
+<script>
+import HelloWorld from './components/HelloWorld.vue'
+
+export default {
+  name: 'App',
+  data() {
+    return {
+      counter: 0
+    }
+  }
+}
+</script>
